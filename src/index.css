@@ -1,0 +1,32 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  /* Keyframes */
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Custom utility mappings */
+  --animate-scale-in: scaleIn 150ms ease-out;
+  --animate-pop: pop 200ms ease-in-out;
+}
